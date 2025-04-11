@@ -32,3 +32,5 @@ model.fit(x_train, y_train, epochs=10, batch_size=128, validation_split=0.1)
 # Evaluate the model on test data
 test_loss, test_acc = model.evaluate(x_test, y_test)
 print("Test accuracy:", test_acc)
+
+
