@@ -119,8 +119,11 @@ def quick_sort(arr):
 if __name__ == "__main__":
 	data = [64, 34, 25, 12, 22, 11, 90]
 	print("Original data:", data)
-	print("Bubble Sort:", bubble_sort(data))
+	print("Bubble Sort:", bubble_sort_v1(data))
 	print("Selection Sort:", selection_sort(data))
 	print("Insertion Sort:", insertion_sort(data))
 	print("Merge Sort:", merge_sort(data))
 	print("Quick Sort:", quick_sort(data))
+
+
+# This code implements several sorting algorithms: Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort.
