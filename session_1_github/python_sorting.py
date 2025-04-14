@@ -1,4 +1,4 @@
-def bubble_sort(arr):
+def bubble_sort_v1(arr):
 	"""
 	Bubble sort algorithm.
 
