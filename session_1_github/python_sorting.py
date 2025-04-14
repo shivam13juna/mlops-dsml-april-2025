@@ -1,5 +1,5 @@
 
-def bubble_sort_master(arr):
+def bubble_sort_ex3(arr):
 	"""
 	Bubble sort algorithm.
 
