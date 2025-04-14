@@ -1,4 +1,5 @@
-def bubble_sort_v1(arr):
+
+def bubble_sort_master(arr):
 	"""
 	Bubble sort algorithm.
 
@@ -119,7 +120,7 @@ def quick_sort(arr):
 if __name__ == "__main__":
 	data = [64, 34, 25, 12, 22, 11, 90]
 	print("Original data:", data)
-	print("Bubble Sort:", bubble_sort_v1(data))
+	print("Bubble Sort:", bubble_sort_master(data))
 	print("Selection Sort:", selection_sort(data))
 	print("Insertion Sort:", insertion_sort(data))
 	print("Merge Sort:", merge_sort(data))
