@@ -1,4 +1,4 @@
-def solve_tsp(distance_matrix):
+def solve_tsp_e1(distance_matrix):
 	"""
 	Dummy function for solving the Traveling Salesman Problem.
 	This function should eventually implement an efficient TSP algorithm.
@@ -25,5 +25,8 @@ if __name__ == "__main__":
 		[10, 0, 20],
 		[15, 20, 0]
 	]
-	route = solve_tsp(dummy_distance_matrix)
+	route = solve_tsp_e1(dummy_distance_matrix)
 	print("Dummy TSP route:", route)
+
+
+#How to solve travelling salesman problem in O(n^2)
