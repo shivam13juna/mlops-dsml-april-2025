@@ -1,3 +1,4 @@
+
 def bubble_sort_master(arr):
 	"""
 	Bubble sort algorithm.
@@ -124,3 +125,6 @@ if __name__ == "__main__":
 	print("Insertion Sort:", insertion_sort(data))
 	print("Merge Sort:", merge_sort(data))
 	print("Quick Sort:", quick_sort(data))
+
+
+# This code implements several sorting algorithms: Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort.
