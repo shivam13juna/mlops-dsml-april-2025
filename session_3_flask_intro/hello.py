@@ -17,105 +17,105 @@ def hello():
 	"""
 	return {"message": "Hello, World!"}
 
-#@pancakes.route('/', methods=['GET'])
-#def index():
-#	"""
-#	A very fancy animated webpage with vibrant colors and beautiful animations.
-#	"""
-#	return '''
-#<!DOCTYPE html>
-#<html lang="en">
-#<head>
-#  <meta charset="UTF-8">
-#  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-#  <title>Vibrant Animation</title>
-#  <style>
-#	body {
-#	  margin: 0;
-#	  padding: 0;
-#	  background: linear-gradient(45deg, #ff0066, #ffcc00, #33cc33, #0099ff);
-#	  background-size: 600% 600%;
-#	  animation: gradientAnimation 16s ease infinite;
-#	  font-family: 'Arial', sans-serif;
-#	  display: flex;
-#	  justify-content: center;
-#	  align-items: center;
-#	  height: 100vh;
-#	  color: white;
-#	}
-#	@keyframes gradientAnimation {
-#	  0% { background-position: 0% 50%; }
-#	  50% { background-position: 100% 50%; }
-#	  100% { background-position: 0% 50%; }
-#	}
-#	.content {
-#	  text-align: center;
-#	}
-#	.title {
-#	  font-size: 3em;
-#	  margin-bottom: 20px;
-#	  animation: fadeIn 2s ease backwards;
-#	}
-#	.subtitle {
-#	  font-size: 1.5em;
-#	  animation: fadeIn 3s ease backwards;
-#	}
-#	@keyframes fadeIn {
-#	  from { opacity: 0; transform: translateY(20px); }
-#	  to { opacity: 1; transform: translateY(0px); }
-#	}
-#  </style>
-#</head>
-#<body>
-#  <div class="content">
-#	<div class="title">Welcome to the Vibrant Animations!</div>
-#	<div class="subtitle">Enjoy the dynamic colors and smooth animations.</div>
-#  </div>
-#</body>
-#</html>
-#'''
-
 @pancakes.route('/', methods=['GET'])
-def home():
-
+def index():
+	"""
+	A very fancy animated webpage with vibrant colors and beautiful animations.
+	"""
 	return '''
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Save Hello</title>
-	<style>
-		body {
-			background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-			font-family: Arial, sans-serif;
-			text-align: center;
-			padding-top: 100px;
-			margin: 0;
-		}
-		h1 {
-			font-size: 60px;
-			color: #ffffff;
-			animation: glow 2s infinite alternate;
-			margin-bottom: 20px;
-		}
-		p {
-			font-size: 20px;
-			color: #333;
-		}
-		@keyframes glow {
-			from {
-				text-shadow: 0 0 10px #fff;
-			}
-			to {
-				text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
-			}
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibrant Animation</title>
+  <style>
+	body {
+	  margin: 0;
+	  padding: 0;
+	  background: linear-gradient(45deg, #ff0066, #ffcc00, #33cc33, #0099ff);
+	  background-size: 600% 600%;
+	  animation: gradientAnimation 16s ease infinite;
+	  font-family: 'Arial', sans-serif;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 100vh;
+	  color: white;
+	}
+	@keyframes gradientAnimation {
+	  0% { background-position: 0% 50%; }
+	  50% { background-position: 100% 50%; }
+	  100% { background-position: 0% 50%; }
+	}
+	.content {
+	  text-align: center;
+	}
+	.title {
+	  font-size: 3em;
+	  margin-bottom: 20px;
+	  animation: fadeIn 2s ease backwards;
+	}
+	.subtitle {
+	  font-size: 1.5em;
+	  animation: fadeIn 3s ease backwards;
+	}
+	@keyframes fadeIn {
+	  from { opacity: 0; transform: translateY(20px); }
+	  to { opacity: 1; transform: translateY(0px); }
+	}
+  </style>
 </head>
 <body>
-	<h1>Hello There</h1>
-	<p>Welcome to the beautifully animated page!</p>
+  <div class="content">
+	<div class="title">Welcome to Flask Session!</div>
+	<div class="subtitle">Let's learn how to send POST request to our application.</div>
+  </div>
 </body>
 </html>
-	'''
+'''
+
+#@pancakes.route('/', methods=['GET'])
+#def home():
+
+#	return '''
+#<html>
+#<head>
+#	<title>Save Hello</title>
+#	<style>
+#		body {
+#			background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+#			font-family: Arial, sans-serif;
+#			text-align: center;
+#			padding-top: 100px;
+#			margin: 0;
+#		}
+#		h1 {
+#			font-size: 60px;
+#			color: #ffffff;
+#			animation: glow 2s infinite alternate;
+#			margin-bottom: 20px;
+#		}
+#		p {
+#			font-size: 20px;
+#			color: #333;
+#		}
+#		@keyframes glow {
+#			from {
+#				text-shadow: 0 0 10px #fff;
+#			}
+#			to {
+#				text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+#			}
+#		}
+#	</style>
+#</head>
+#<body>
+#	<h1>Hello There</h1>
+#	<p>Welcome to the beautifully animated page!</p>
+#</body>
+#</html>
+#	'''
 
 
 @pancakes.route('/predict', methods=['POST'])
