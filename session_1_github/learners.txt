@@ -3,5 +3,9 @@ List of names
 1. Munira
 2. Mohammed Gani
 3. Aruna Panwar
+<<<<<<< HEAD
 4. Usmaan
+=======
+4.Usman
+>>>>>>> 5098476b529ee387f3eb09250fbd864f84a163fc
 
