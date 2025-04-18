@@ -41,3 +41,7 @@ CMD ["python", "-m", "flask", "--app", "hello.py", "run", "--host=0.0.0.0", "--p
 #docker container ls --all
 
 # this will tell us the container id, which we can use to stop the container
+
+#swarms
+
+#docker image tag mark2:latest shivam13juna/example2-docker:latest
