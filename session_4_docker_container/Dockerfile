@@ -16,7 +16,7 @@ FROM python:3.10-slim
 
 #⁠# FROM python:3.8-slim-buster
 # Here I'm using the python:3.10-alpine image as the base image
-# This is a lightweight version of the Python image based on Alpine Linux
+
 
 WORKDIR /flask-loan-app
 # This will create a directory called flask-loan-app in the container

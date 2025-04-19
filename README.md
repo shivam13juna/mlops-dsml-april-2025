@@ -1,38 +1,148 @@
-# Project Title
+# MLOps – April 2025
 
-A brief introduction to the project goes here.
+This repository contains code, notebooks, and resources from the MLOps held in April 2025. It demonstrates end-to-end workflows for model training, deployment, and serving using various tools and frameworks.
 
-## Overview
+## Repository Structure
 
-This project aims to provide a comprehensive solution for [describe problem or area]. It leverages modern tools and frameworks to ensure scalability and maintainability. Whether you’re an experienced engineer or a newcomer to the field, this repository offers a robust foundation to build upon.
+- `cars24-car-price-model.joblib` : Pre-trained car price prediction model.
+- `scaler.pkl`               : Standard scaler used in preprocessing.
+- `session_1_github/`        : Intro to GitHub and basic Python models
+  - `conv_network.py`, `neural_network_mnist.py`, `rnn.py`, etc.
+- `session_2_streamlit/`     : Building interactive apps with Streamlit
+  - `cars_24_streamlit.py`, sample dataset and `requirements.txt`.
+- `session_3_flask_intro/`   : Serving models via Flask API
+  - `hello.py`, trained classifier, and sample data.
+- `session_4_docker_container/`: Containerizing your ML apps with Docker
+  - `Dockerfile`, Flask service, and `artefacts/requirements.txt`.
 
-## Key Features
+## Prerequisites
 
-- **Modular Design:** Organized structure for easy maintenance.
-- **Scalable Architecture:** Designed to handle growth in data and user base.
-- **User-Friendly Interface:** Clear documentation and intuitive design principles.
-- **Modern Tools:** Integration with state-of-the-art technologies.
+- Python 3.8+ installed
+- pip package manager
+- Docker (for session 4)
 
-## Getting Started
+## Setup
 
-To get started, clone the repository and install the necessary dependencies. Detailed setup instructions can be found in the installation section.
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-repo/mlops-dsml-april-2025.git
+   cd mlops-dsml-april-2025
+   ```
+
+2. (Optional) Create a virtual environment:
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+## Usage by Session
+
+### Session 1 – GitHub & Python Models
 
 ```bash
-git clone https://github.com/your-repo/project.git
-cd project
-npm install  # or the appropriate command for your language/environment
+pip install -r session_1_github/requirements.txt  # if provided
+python session_1_github/run.py  # explore scripts and neural network examples
+```
+#### Common Git Commands
+```bash
+# Clone this repository
+git clone https://github.com/your-repo/mlops-dsml-april-2025.git
+
+# Check repository status
+git status
+
+# Stage changes for commit
+git add .
+
+# Commit changes with message
+git commit -m "Your descriptive message"
+
+# Push commits to remote (main branch)
+git push origin main
+
+# Pull latest changes from remote
+git pull
+
+# Create a new branch
+git branch feature/your-feature-name
+
+# Switch to a branch
+git checkout feature/your-feature-name
+
+# Merge a branch into main
+git checkout main
+git merge feature/your-feature-name
+
+# View commit history
+git log
+
+# Show remote URLs
+git remote -v
 ```
 
-## Usage
 
-After installation, follow the guidelines in the Usage section to start the application and begin contributing. Explore the documentation for more detailed instructions.
+### Session 2 – Streamlit App
+
+```bash
+pip install -r session_2_streamlit/requirements.txt
+streamlit run session_2_streamlit/cars_24_streamlit.py
+```
+- Step 1: Examine `cars24-car-price.csv` and load it via `cars_24_streamlit.py` to see preprocessing steps.
+- Step 2: Interact with Streamlit widgets (sliders, dropdowns) to adjust feature values and observe real-time price predictions.
+- Step 3: Inspect the underlying model file (`cars24-car-price-model.joblib`) and `scaler.pkl` to understand the inference pipeline.
+- Step 4: Modify UI components in `cars_24_streamlit.py` and re-run to experiment with additional features.
+
+### Session 3 – Flask API
+
+```bash
+pip install -r session_3_flask_intro/requirements.txt
+flask --app hello.py run --host=0.0.0 --port=5000
+```
+curl http://localhost:5000/predict?feature1=value1&...
+```
+- Step 1: Open `train_ml.ipynb` to retrain or fine-tune the classifier on `train_flask.csv` and save to `classifier.pkl`.
+- Step 2: Run `hello.py` to start the Flask server with the trained model.
+- Step 3: Use `curl` or Postman to send GET/POST requests to `/predict` endpoint, passing feature values and verifying JSON responses.
+- Step 4: Check logs printed in terminal for request handling and prediction details.
+```
+
+### Session 4 – Docker Container
+
+```bash
+# Build the Docker image
+$ docker build -t mlops-dsml-app session_4_docker_container/
+$ docker image ls
+
+# Run the container in foreground
+$ docker run -p 8000:8000 mlops-dsml-app
+
+# Run with a custom container name
+$ docker run -p 8000:8000 --name mlops-dsml-container mlops-dsml-app
+
+# Run in detached mode
+$ docker run -d -p 8000:8000 mlops-dsml-app
+
+# Access an interactive shell inside the container
+$ docker run -it -p 8000:8000 mlops-dsml-app bash
+
+# List all containers
+docker container ls --all
+
+# Tag and push the image to Docker Hub
+$ docker image tag mlops-dsml-app:latest your-dockerhub-username/mlops-dsml-app:latest
+$ docker push your-dockerhub-username/mlops-dsml-app:latest
+```
+- Step 1: Review the `Dockerfile` and `artefacts/requirements.txt` to understand the build context and dependencies.
+- Step 2: Build and inspect the image locally (`docker image ls`).
+- Step 3: Run the container (foreground, named, detached or interactive) and verify that the Flask API is available at `http://localhost:8000/predict`.
+- Step 4: Use `docker logs <container_id>` or `docker container ls --all` to debug issues and inspect runtime behavior.
 
 ## Contributing
 
-Contributions are welcome! Please review the [Contribution Guidelines](CONTRIBUTING.md) before submitting a pull request.
+Contributions, issues, and feature requests are welcome. Please review `CONTRIBUTING.md` and open a pull request.
 
 ## License
 
-This project is licensed under the MIT License. For full license text, see the [LICENSE](LICENSE) file.
-
-Happy coding!
+This project is licensed under the MIT License. See `LICENSE` for details.
