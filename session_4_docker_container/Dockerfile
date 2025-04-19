@@ -1,5 +1,20 @@
-#FROM python:3.10-alpine⁠
-FROM python:3.8-slim-buster
+FROM python:3.10-slim
+
+
+#FROM python:3.10-alpine
+# this didn't work, I got errors like 
+#10.90       The following exception(s) were encountered:
+#10.90       Running `cc --version` gave "[Errno 2] No such file or directory: 'cc'"
+#10.90       Running `gcc --version` gave "[Errno 2] No such file or directory: 'gcc'"
+#10.90       Running `clang --version` gave "[Errno 2] No such file or directory: 'clang'"
+#10.90       Running `nvc --version` gave "[Errno 2] No such file or directory: 'nvc'"
+#10.90       Running `pgcc --version` gave "[Errno 2] No such file or directory: 'pgcc'"
+#10.90       Running `icc --version` gave "[Errno 2] No such file or directory: 'icc'"
+#10.90       Running `icx --version` gave "[Errno 2] No such file or directory: 'icx'"
+# cc is the C compiler, gcc is the GNU C compiler, clang is a C/C++/Objective-C compiler, nvc is the NVIDIA HPC SDK compiler, pgcc is the Portland Group C compiler, icc is the Intel C compiler, and icx is the Intel C++ compiler. We need all this, as they are required to compile the C extensions for some of the Python packages we are using in our project.
+
+
+#⁠# FROM python:3.8-slim-buster
 # Here I'm using the python:3.10-alpine image as the base image
 # This is a lightweight version of the Python image based on Alpine Linux
 
