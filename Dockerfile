@@ -24,7 +24,7 @@ WORKDIR /flask-loan-app
 COPY session_6_CI/requirements.txt .
 # This copies the requirements.txt file from the artefacts directory on your host machine to the current working directory in the container
 
-RUN pip install -r session_6_CI/requirements.txt
+RUN pip install -r requirements.txt
 # This command installs the Python packages listed in requirements.txt
 
 COPY session_6_CI/ /flask-loan-app/
