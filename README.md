@@ -147,8 +147,23 @@ Contributions, issues, and feature requests are welcome. Please review `CONTRIBU
 
 This project is licensed under the MIT License. See `LICENSE` for details.
 
+## Miscellaneous
+### Git Aliases
+```
+gs() {
+    git status
+}
 
-<!--gu() {
+gp() {
+    git pull
+}
+
+gl() {
+    git log --oneline --all
+}
+
+
+gu() {
     # First argument as commit message
     local commit_msg="$1"
     # Determine branch: use second argument if provided, otherwise use current branch
@@ -157,4 +172,5 @@ This project is licensed under the MIT License. See `LICENSE` for details.
     git add .
     git commit -m "$commit_msg"
     git push --set-upstream origin "$branch"
-}-->
+}
+```
