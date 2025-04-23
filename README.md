@@ -146,3 +146,15 @@ Contributions, issues, and feature requests are welcome. Please review `CONTRIBU
 ## License
 
 This project is licensed under the MIT License. See `LICENSE` for details.
+
+
+<!--gu() {
+    # First argument as commit message
+    local commit_msg="$1"
+    # Determine branch: use second argument if provided, otherwise use current branch
+    local branch="${2:-$(git rev-parse --abbrev-ref HEAD)}"
+
+    git add .
+    git commit -m "$commit_msg"
+    git push --set-upstream origin "$branch"
+}-->
