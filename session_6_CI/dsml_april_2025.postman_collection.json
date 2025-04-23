@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "6642fe4a-a861-4b2f-8fb0-3c1c1d9d3e79",
+		"name": "dsml_april_2025",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13079532"
+	},
+	"item": [
+		{
+			"name": "predict_endpoint",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Gender\": \"Male\",\n    \"Married\": \"Unmarried\",\n    \"Credit_History\": \"Cleared Debts\",\n    \"ApplicantIncome\": 50000, \n    \"LoanAmount\": 500000000\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.229.49.96:8000/predict",
+					"protocol": "http",
+					"host": [
+						"34",
+						"229",
+						"49",
+						"96"
+					],
+					"port": "8000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

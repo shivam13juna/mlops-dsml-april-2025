@@ -1,11 +1,18 @@
 from base_file import a, b, add_two_numbers, subtract_two_numbers, multiply_two_numbers, divide_two_numbers
-
+import pytest
 #!pip install pytest
 
 
 # Test the code
 
 # pytest is a testing framework for Python that allows you to write simple and scalable test cases.
+@pytest.fixture
+def create_something():
+	return "something"
+
+
+def testing_wednesday(create_something):
+	assert create_something == "something"
 
 
 def test_a_functionality():
