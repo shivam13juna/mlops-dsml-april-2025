@@ -4,10 +4,10 @@ name: First CI Workflow
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 
 
@@ -28,7 +28,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r session_6_CI/requirements.txt
-          
+
       - name: Run tests
         run: |
           pytest
