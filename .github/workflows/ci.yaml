@@ -11,33 +11,32 @@ on:
 
 
 
+
 jobs:
-
-
+  
   job1:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # v4 is the version of the action we're using, not the branch of the code; https://github.com/actions/checkout 
+        # purpose of checkout code is to get the code from the repository, and put it in the runner machine
 
-          # actions/checkout@v4 is a GitHub Action that checks out your repository under $GITHUB_WORKSPACE, so your workflow can access it. This action is necessary for any workflow that needs to access the code in the repository.
-        - name: Set up Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.10'  # Specify the Python version you want to use
-        
-        - name: Install dependencies
-          run: |
-            python -m pip install --upgrade pip
-            pip install -r session_6_CI/requirements.txt
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
 
-        - name: Run tests
-          run: |
-            pytest
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          pytest
 
 
-  job2: 
+  job2:
     needs: job1
     runs-on: ubuntu-latest
     steps:
@@ -48,9 +47,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image and push to DockerHub
-        uses: docker/build-push-action@v6 # docker build -t image_name .
+        uses: docker/build-push-action@v6
         with:
           push: true
           tags: shivam13juna/create-repo:latest
-
     
