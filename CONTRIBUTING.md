@@ -1,4 +1,4 @@
-# Contributing to MLOps & DSML Workshop
+# Contributing to MLOps Repository
 
 Thank you for your interest in contributing to this project! This document outlines the best practices and guidelines to help you get started.
 
