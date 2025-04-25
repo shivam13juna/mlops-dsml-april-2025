@@ -21,13 +21,13 @@ FROM python:3.10-slim
 WORKDIR /flask-loan-app
 # This will create a directory called flask-loan-app in the container
 
-COPY session_7_CI/requirements.txt .
+COPY session_7_CD/requirements.txt .
 # This copies the requirements.txt file from the artefacts directory on your host machine to the current working directory in the container
 
 RUN pip install -r requirements.txt
 # This command installs the Python packages listed in requirements.txt
 
-COPY session_7_CI/ /flask-loan-app/
+COPY session_7_CD/ /flask-loan-app/
 # This copies the entire contents of the current directory on your host machine to the /flask-loan-app directory in the container
 
 CMD ["python", "-m", "flask", "--app", "hello.py", "run", "--host=0.0.0.0", "--port=8000"]
