@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r session_6_CI/requirements.txt
+          pip install -r session_7_CI/requirements.txt
 
       - name: Run tests
         run: |
