@@ -174,3 +174,64 @@ gu() {
     git push --set-upstream origin "$branch"
 }
 ```
+
+
+### Jmeter 
+
+#### BeanShell Preprocessor
+```java
+import java.util.Random;
+
+Random random = new Random();
+
+// Define arrays for choices
+String[] genders = new String[]{"Male", "Female", "Confused"};
+String[] marrieds = new String[]{"Married", "Un-Married"};
+String[] credit_histories = new String[]{"Unclear Debts", "Clear Debts"};
+
+// Select random values
+String selectedGender = genders[random.nextInt(genders.length)];
+String selectedMarried = marrieds[random.nextInt(marrieds.length)];
+int applicantIncome = random.nextInt(1000000000);
+int loanAmount = random.nextInt(1000000000);
+String selectedCreditHistory = credit_histories[random.nextInt(credit_histories.length)];
+
+// Store values in JMeter variables
+vars.put("gender", selectedGender);
+vars.put("married", selectedMarried);
+vars.put("applicant_income", Integer.toString(applicantIncome));
+vars.put("loan_amount", Integer.toString(loanAmount));
+vars.put("credit_history", selectedCreditHistory);
+```
+
+#### Post request body-data
+```
+{
+    "Gender": "${gender}",
+    "Married": "${married}",
+    "ApplicantIncome": ${applicant_income},
+    "LoanAmount": ${loan_amount},
+    "Credit_History": "${credit_history}"
+}
+```
+
+### Steps for connecting to EC2
+
+
+1. **SSH into EC2 Instance**:
+   ```bash
+   chmod 600 mlops-key-pair-april25.pem 
+   ssh -i "your-key.pem" ubuntu@your-ec2-public-dns
+   ```
+explain usage of chmod 600
+    - The `chmod 600` command sets the permissions of the key file to be read/write for the owner only. This is important for security reasons, as SSH will refuse to use a key file that is accessible by others.
+
+2. **Install Docker**:
+
+  https://docs.docker.com/engine/install/ubuntu/
+
+
+  If you want to run Docker as a non-root user, then you need to add your user to the docker group.
+
+  sudo usermod -aG docker $USER
+
