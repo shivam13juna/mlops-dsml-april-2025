@@ -1,0 +1,7 @@
+# This is a basic Python script template
+
+def main():
+    print("Hello, World!")
+
+if __name__ == "__main__":
+    main()
