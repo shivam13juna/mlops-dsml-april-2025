@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/shivam13juna/mlops-dsml-april-2025/branch/master/graph/badge.svg?token=7UJEZOAX84)](https://codecov.io/gh/shivam13juna/mlops-dsml-april-2025)
+
 # MLOps – April 2025
 
 This repository contains code, notebooks, and resources from the MLOps held in April 2025. It demonstrates end-to-end workflows for model training, deployment, and serving using various tools and frameworks.
