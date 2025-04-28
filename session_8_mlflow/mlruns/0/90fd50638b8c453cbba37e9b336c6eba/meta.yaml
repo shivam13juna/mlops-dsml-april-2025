@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/shivam13juna/Documents/scaler/mlops/april_2025/mlops-dsml-april-2025/session_8_mlflow/mlruns/0/90fd50638b8c453cbba37e9b336c6eba/artifacts
+end_time: 1745857060951
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 90fd50638b8c453cbba37e9b336c6eba
+run_name: auspicious-koi-451
+run_uuid: 90fd50638b8c453cbba37e9b336c6eba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745857060943
+status: 4
+tags: []
+user_id: shivam13juna
