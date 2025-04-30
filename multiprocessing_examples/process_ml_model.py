@@ -30,9 +30,11 @@ if __name__ == '__main__':
 
     # 3. List of models to train
     models_to_train = [
-        (LogisticRegression, {"max_iter": 1000}),
+        #(LogisticRegression, {"max_iter": 1000}),
         (RandomForestClassifier, {"n_estimators": 50}),
-        (SVC, {"kernel": "rbf"})
+        (RandomForestClassifier, {"n_estimators": 50}),
+        (RandomForestClassifier, {"n_estimators": 50})
+        #(SVC, {"kernel": "rbf"})
     ]
 
     # 4. Create a multiprocessing Pool and train models

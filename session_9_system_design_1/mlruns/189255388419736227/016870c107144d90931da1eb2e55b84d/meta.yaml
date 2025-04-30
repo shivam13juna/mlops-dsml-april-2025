@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/shivam13juna/Documents/scaler/mlops/april_2025/mlops-dsml-april-2025/session_9_system_design_1/mlruns/189255388419736227/016870c107144d90931da1eb2e55b84d/artifacts
+end_time: 1746030053389
+entry_point_name: ''
+experiment_id: '189255388419736227'
+lifecycle_stage: active
+run_id: 016870c107144d90931da1eb2e55b84d
+run_name: 'run_2011-01-29 00:00:00 : 2011-02-07 23:00:00'
+run_uuid: 016870c107144d90931da1eb2e55b84d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746030053374
+status: 3
+tags: []
+user_id: shivam13juna
